@@ -27,11 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# Restframework custom settings
-REST_FRAMEWORK = {
-    'SEARCH_PARAM': 'q'
-}
-
 
 # Application definition
 
