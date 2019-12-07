@@ -7,5 +7,6 @@ router = routers.DefaultRouter()
 router.register('dish',views.DishMenuView)
 
 urlpatterns = [
-    path('',include(router.urls))
+    path('',include(router.urls)),
+   
 ]
