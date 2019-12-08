@@ -27,7 +27,7 @@ class DishMenuView(viewsets.ModelViewSet):
     queryset = DishMenu.objects.all()
     serializer_class = DishSerializer
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
-    search_fields = ['name']
+    search_fields = ['name','price']
     filter_class = PriceFilter
     ordering = ['name']
-    ordering_fields = ["price"]
+    ordering_fields = ["name","price"]

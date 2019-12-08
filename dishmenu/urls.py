@@ -4,7 +4,7 @@ from . import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register('dish',views.DishMenuView)
+router.register('api',views.DishMenuView)
 
 urlpatterns = [
     path('',include(router.urls)),
