@@ -8,5 +8,4 @@ router.register('api',views.DishMenuView)
 
 urlpatterns = [
     path('',include(router.urls)),
-   
 ]
