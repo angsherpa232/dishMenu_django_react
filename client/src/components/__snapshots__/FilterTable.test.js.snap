@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterTable should match snapshot. 1`] = `
+<form
+  className="searchContainer"
+>
+  <input
+    className="inputField"
+    onChange={[Function]}
+    placeholder="Preferred dish"
+    type="text"
+    value=""
+  />
+  <button
+    className="btn"
+    onClick={[Function]}
+  >
+    Search
+  </button>
+</form>
+`;
