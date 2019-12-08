@@ -58,7 +58,7 @@ ROOT_URLCONF = 'dishPrice.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'book')],
+        'DIRS': [os.path.join(BASE_DIR, '..','..','..')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,5 +124,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'book', "build", "static"),  # update the STATICFILES_DIRS
+    os.path.join(BASE_DIR,"..","..","..","build", "static"),  # update the STATICFILES_DIRS
 )

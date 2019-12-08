@@ -5,4 +5,4 @@ class DishMenu(models.Model):
     price = models.IntegerField() 
 
     def __str__(self):
-        return self.price
+        return self.name
