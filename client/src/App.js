@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Table from "./components/Table";
 import FilterTable from "./components/FilterTable";
+import ErrorBox from "./components/ErrorBox";
 import axios from "axios";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       .then(response => {
         setDishes(response.data);
       })
-      .catch(error => console.log(error));
+      .catch(error => setError(error.message));
   }, []);
 
   // Handle async call for sorting
@@ -32,7 +33,7 @@ function App() {
     axios
       .get(`${url}ordering=${sortDesc}${sortKey}`)
       .then(response => setDishes(response.data))
-      .catch(error => setError(error));
+      .catch(error => setError(error.message));
     setSortBy(sortBy === "asc" ? "desc" : "asc");
   };
 
@@ -53,14 +54,14 @@ function App() {
         response.data.length === 0 ? setError("error") : setError(null);
         setDishes(response.data);
       })
-      .catch(error => console.log("err ", error));
+      .catch(error => setError(error.message));
     setSearchValue(value);
   };
 
   return (
     <>
       <FilterTable onClickHandler={onClickHandler} />
-      <Table dishes={dishes} onSort={onSort} />;
+      {error ? <ErrorBox /> : <Table dishes={dishes} onSort={onSort} />}
     </>
   );
 }

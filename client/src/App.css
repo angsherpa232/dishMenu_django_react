@@ -47,3 +47,17 @@
   color: red;
   margin-top: 1rem;
 }
+
+.errorContainer {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 350px;
+  margin: 10px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  line-height: 2;
+}
