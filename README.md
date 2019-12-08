@@ -71,6 +71,16 @@ To view the api interface
 Open your web browser and view the app at `localhost:8000/api/`
 ```
 
+```
+To make a change to particular dish item using id
+Open your web browser and view the app at `localhost:8000/api/:id` eg: `localhost:8000/api/2`
+```
+
+```
+To list out dishes [above,below,within] certain price range
+Open your web browser and view the app at `localhost:8000/api/?min_price=yourprice&max_price=yourprice` eg: `localhost:8000/api/min_price=2&max_price=20`
+```
+
 ## Authentication
 
 As a role of admin
