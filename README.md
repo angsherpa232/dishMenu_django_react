@@ -74,5 +74,5 @@ Open your web browser and view the app at `localhost:8000/api/`
 ## Authentication
 
 As a role of admin
-username:
-password:
+username: user123
+password: password123
