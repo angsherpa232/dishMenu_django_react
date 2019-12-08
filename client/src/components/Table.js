@@ -61,7 +61,8 @@ class Table extends PureComponent {
 }
 
 Table.propTypes = {
-  dishes: PropTypes.array.isRequired
+  dishes: PropTypes.array.isRequired,
+  onSort: PropTypes.func.isRequired
 };
 
 export default Table;
