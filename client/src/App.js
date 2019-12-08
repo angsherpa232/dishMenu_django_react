@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./App.css";
 import Table from "./components/Table";
+import FilterTable from "./components/FilterTable";
 import axios from "axios";
 
 function App() {
@@ -13,6 +14,16 @@ function App() {
   const [searchValue, setSearchValue] = useState(null);
   // State to keep track of dishes length
   const [error, setError] = useState(null);
+
+  // Fetch the data and populate the dishes array
+  useEffect(() => {
+    axios
+      .get("/api/")
+      .then(response => {
+        setDishes(response.data);
+      })
+      .catch(error => console.log(error));
+  }, []);
 
   // Handle async call for sorting
   const handleAsyncCallForSorting = (sortKey, byDesc) => {
@@ -34,17 +45,24 @@ function App() {
     }
   };
 
-  // Fetch the data and populate the dishes array
-  useEffect(() => {
+  // Search button onClick handler
+  const onClickHandler = value => {
     axios
-      .get("/api/")
+      .get(`/api/?name=${value}`)
       .then(response => {
+        response.data.length === 0 ? setError("error") : setError(null);
         setDishes(response.data);
       })
-      .catch(error => console.log(error));
-  }, []);
+      .catch(error => console.log("err ", error));
+    setSearchValue(value);
+  };
 
-  return <Table dishes={dishes} onSort={onSort} />;
+  return (
+    <>
+      <FilterTable onClickHandler={onClickHandler} />
+      <Table dishes={dishes} onSort={onSort} />;
+    </>
+  );
 }
 
 export default App;

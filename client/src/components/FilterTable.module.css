@@ -1,0 +1,52 @@
+.inputField {
+  border: 1px solid #4baf50;
+  padding: 2px 5px;
+  border-radius: 10px;
+  font-size: large;
+  width: 13rem;
+}
+
+.inputField:focus,
+.filterOptions:focus {
+  outline: none;
+}
+
+.filterOptions {
+  font-size: large;
+  margin: 0 40px 0 10px;
+}
+
+.searchContainer {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 35px;
+  max-width: 350px;
+  margin: 10px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.btn {
+  font: inherit;
+  background: #ff2058;
+  padding: 3px 5px;
+  color: white;
+  border: 1px solid #ff2058;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 15px;
+}
+
+.btn:hover,
+.btn:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+
+.btn:focus {
+  outline: none;
+}
