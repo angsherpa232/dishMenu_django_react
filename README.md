@@ -63,7 +63,7 @@ python3 manage.py runserver
 
 To view the client interface
 Open your web browser and view the app at `localhost:8000/client/`
-
+(Note: Throws an error if build step as mentioned above is not performed)
 ```
 
 ```
