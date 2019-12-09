@@ -59,17 +59,12 @@ python3 manage.py runserver
 
 ```
 
-```
-
-To view the client interface
-Open your web browser and view the app at `localhost:8000/client/`
-(Note: Throws an error if build step as mentioned above is not performed)
-```
 
 ```
 
 To view the admin interface to make changes
 Open your web browser and view the app at `localhost:8000/admin/`
+(Add dishes and price to populate the database)
 ```
 
 ```
@@ -91,4 +86,10 @@ Open your web browser and view the app at `localhost:8000/api/:id` eg: `localhos
 To list out dishes [above,below,within] certain price range
 Open your web browser and view the app at `localhost:8000/api/?min_price=yourprice&max_price=yourprice` eg: `localhost:8000/api/min_price=2&max_price=20`
 
+```
+```
+
+To view the client interface
+Open your web browser and view the app at `localhost:8000/client/`
+(Note: Throws an error if build step as mentioned above is not performed)
 ```
